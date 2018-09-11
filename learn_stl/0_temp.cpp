@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -16,7 +17,7 @@ public:
 
 int main()
 {
-    
+
 
     return 0;
 }
