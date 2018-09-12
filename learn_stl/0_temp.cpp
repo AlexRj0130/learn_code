@@ -1,14 +1,15 @@
 #include <iostream>
 
 #include <string>
+#include <vector>
 #include <algorithm>
 
 using namespace std;
 
-class LearnString
+class LearnVector
 {
 public:
-    void string()
+    void vector()
     {
 
     }
