@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 
 #include <string>
 #include <vector>
@@ -11,7 +12,7 @@ class LearnVector
 public:
     void vector()
     {
-
+        
     }
 };
 
@@ -19,6 +20,6 @@ public:
 int main()
 {
 
-
+    system("pause");
     return 0;
 }
