@@ -158,7 +158,7 @@ public:
         cout << endl;
     }
 
-    // 将 vector 中的元素随机乱序
+    // 将 vector 中的元素随机乱序（目前，这个随机乱序的函数的功能还是不正常）
     void vectorRandomShuffle()
     {
         int array[10] = {0, 1, 2, 3, 4, 6, 7, 8, 9};
