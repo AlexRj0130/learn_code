@@ -4,14 +4,15 @@
 #include <string>
 #include <vector>
 #include <list>
+#include <iterator>
 #include <algorithm>
 
 using namespace std;
 
-class LearnVector
+class LearnList
 {
 public:
-    void vector()
+    void list()
     {
         
     }
