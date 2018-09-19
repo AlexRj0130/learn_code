@@ -87,6 +87,8 @@ public:
         lst_5.insert(iter_5, iter_6_sta, iter_6_end);
         for_each(lst_5.begin(), lst_5.end(), cout_list_elem);  // 输出 1 2 6 7 3 
         cout << endl;
+        for_each(lst_6.begin(), lst_6.end(), cout_list_elem);  // 输出 4 5 6 7 8 9  
+        cout << endl;
     }
 
 private: 
