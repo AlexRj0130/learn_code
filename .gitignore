@@ -1,0 +1,3 @@
+*.pyc
+learn_elasticsearch/conf.py
+learn_elasticsearch/.vscode/launch.json

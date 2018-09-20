@@ -8,7 +8,7 @@ forward_list 的底层实现是一个前向链表
 
 list 类型中，size(), 得到容器中节点的个数   
 forward_list 类型中，没有提供 size() 函数  
-list 容器也支持下标运算，但是访问速度没有 vector 快
+list 容器不支持下标运算符
 list 容器支持快速地插入和删除  
 
 list 中没有容量 capacity 的概念了，原因在于 list 的底层数据结构为链表，支持随机的插入和删除，不需要通过预留空间的方式提高效率
