@@ -4,15 +4,18 @@
 #include <string>
 #include <vector>
 #include <list>
+#include <queue>
+#include <deque>
 #include <iterator>
 #include <algorithm>
+#include <numeric>
 
 using namespace std;
 
-class LearnList
+class LearnDeque
 {
 public:
-    void list()
+    void deque()
     {
         
     }
