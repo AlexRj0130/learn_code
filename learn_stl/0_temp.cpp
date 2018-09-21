@@ -6,16 +6,17 @@
 #include <list>
 #include <queue>
 #include <deque>
+#include <map>
 #include <iterator>
 #include <algorithm>
 #include <numeric>
 
 using namespace std;
 
-class LearnDeque
+class LearnMap
 {
 public:
-    void deque()
+    void map()
     {
         
     }
