@@ -2,7 +2,7 @@ package main
 
 func main() {
 	// 第1章
-	abstract()
+	// abstract()
 	// 第2章
 	variable()
 }
