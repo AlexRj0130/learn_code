@@ -249,7 +249,7 @@ func testCSP() {
 	<-done // 阻塞，直到消费者发回结束信号
 }
 
-func main() { // 入口 main 没有参数，且必须放在 main 包中
+func abstract() { // 入口 main 没有参数，且必须放在 main 包中
 	// testPrint()
 	// testVar()
 	// testExpression()
