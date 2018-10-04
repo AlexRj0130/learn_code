@@ -64,7 +64,7 @@ func testAlias() {
 	// 注意，并非拥有相同底层结构的就属于别名。
 }
 
-func basicClasses() {
+func basicType() {
 	// testNotation()
 	// testValueRange()
 	// testStrconv()
