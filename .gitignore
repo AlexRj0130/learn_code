@@ -1,5 +1,6 @@
 *.pyc
-*.csv
 learn_elasticsearch/conf.py
 learn_elasticsearch/.vscode/launch.json
 learn_python/py2_venv
+main.out*
+.DS_Store
