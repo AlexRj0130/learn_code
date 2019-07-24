@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/Users/arjen/code/learn_code/learn_python/py2_venv/bin/python",
+    "python.pythonPath": "/Users/aj/anaconda2/envs/py3_for_test/bin/python",
     "python.venvPath": "/Users/arjen/code/learn_code/learn_python",
     "python.venvFolders": [
         "py2_venv"
