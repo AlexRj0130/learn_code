@@ -4,66 +4,64 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "g++ build",
+            "label": "Build",
             "type": "shell",
-            "command": "g++",
-            "args": [
-                "-g",
-                "-std=c++11",
-                "${file}",
-                "-o",
-                "${workspaceFolder}/debug/main.out"
-            ],
-            "group": {
+            "linux": {
+                "command": "g++",
+                "args": [
+                    "-g",
+                    "-std=c++11",
+                    "${file}",
+                    "-o",
+                    "${workspaceFolder}/debug/main.out"
+                ],
+            },
+            "windows": {
+                "command": "cl.exe",
+                "args": [
+                    "/EHsc",
+                    "/Zi",
+                    "/Fd:",
+                    "${workspaceFolder}/debug/",
+                    "/Fo:",
+                    "${workspaceFolder}/debug/",
+                    "/Fe:",
+                    "${workspaceFolder}/debug/main.exe",
+                    "${file}"
+                ],
+            },
+            "dependsOn": ["Debug Dir"],
+            "group": {                     
                 "kind": "build",
                 "isDefault": true
             }
         },
         {
-            "label": "msvc build",
-            "type": "shell",
-            "command": "cl.exe",
-            "args": [
-                "/EHsc",
-                "/Zi",
-                "/Fd:",
-                "${workspaceFolder}/debug/",
-                "/Fo:",
-                "${workspaceFolder}/debug/",
-                "/Fe:",
-                "${workspaceFolder}/debug/main.exe",
-                "${file}"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "presentation": {
-                "reveal": "always"
-            },
-            "problemMatcher": "$msCompile",
-            "dependsOn": [
-                "ms mkdir"
-            ]
-        },
-        {
-            "label": "ms mkdir",
+            "label": "Debug Dir",
             "type": "shell",
             "command": "mkdir",
             "args": [
                 "debug"
             ],
-            "problemMatcher": []
         },
         {
-            "label": "ms clean",
+            "label": "Clean",
             "type": "shell",
-            "command": "Remove-Item",
-            "args": [
-                "-Recurse",
-                "'${workspaceFolder}\\debug'"
-            ],
+            "linux": {
+                "command": "rm",
+                "args": [
+                    "-rf",
+                    "${workspaceFolder}/debug"
+                ]
+            },
+            "windows": {
+                "command": "Remove-Item",
+                "args": [
+                    "-Recurse",
+                    "'${workspaceFolder}\\debug'"
+                ],
+            },
             "problemMatcher": []
-        }
+        },
     ]
 }
