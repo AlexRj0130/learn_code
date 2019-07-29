@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build Debug",
+            "label": "g++ build",
             "type": "shell",
             "command": "g++",
             "args": [
@@ -12,12 +12,58 @@
                 "-std=c++11",
                 "${file}",
                 "-o",
-                "main.out"
+                "${workspaceFolder}/debug/main.out"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "msvc build",
+            "type": "shell",
+            "command": "cl.exe",
+            "args": [
+                "/EHsc",
+                "/Zi",
+                "/Fd:",
+                "${workspaceFolder}/debug/",
+                "/Fo:",
+                "${workspaceFolder}/debug/",
+                "/Fe:",
+                "${workspaceFolder}/debug/main.exe",
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "problemMatcher": "$msCompile",
+            "dependsOn": [
+                "ms mkdir"
+            ]
+        },
+        {
+            "label": "ms mkdir",
+            "type": "shell",
+            "command": "mkdir",
+            "args": [
+                "debug"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "ms clean",
+            "type": "shell",
+            "command": "Remove-Item",
+            "args": [
+                "-Recurse",
+                "'${workspaceFolder}\\debug'"
+            ],
+            "problemMatcher": []
         }
     ]
 }
