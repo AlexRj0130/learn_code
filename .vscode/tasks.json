@@ -30,7 +30,7 @@
                     "${file}"
                 ],
             },
-            "dependsOn": ["Debug Dir"],
+            "dependsOn": ["Clean", "Debug Dir"],
             "group": {                     
                 "kind": "build",
                 "isDefault": true
