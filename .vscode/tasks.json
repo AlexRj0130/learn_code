@@ -6,6 +6,17 @@
         {
             "label": "Build",
             "type": "shell",
+            "osx": {
+                "command": "g++",
+                "args": [
+                    "-std=c++17",
+                    "-stdlib=libc++",
+                    "${file}",
+                    "-o",
+                    "${workspaceFolder}/debug/main.out",
+                    "--debug"
+                ]
+            },
             "linux": {
                 "command": "g++",
                 "args": [
@@ -30,7 +41,7 @@
                     "${file}"
                 ],
             },
-            "dependsOn": ["Clean", "Debug Dir"],
+            "dependsOn": ["Debug Dir"],
             "group": {                     
                 "kind": "build",
                 "isDefault": true
@@ -41,12 +52,20 @@
             "type": "shell",
             "command": "mkdir",
             "args": [
-                "debug"
+                "${workspaceFolder}/debug"
             ],
+            "dependsOn": ["Clean"]
         },
         {
             "label": "Clean",
             "type": "shell",
+            "osx": {
+                "command": "rm",
+                "args": [
+                    "-rf",
+                    "${workspaceFolder}/debug"
+                ]
+            },
             "linux": {
                 "command": "rm",
                 "args": [

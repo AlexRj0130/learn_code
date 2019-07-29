@@ -4,29 +4,29 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
-            "name": "(msvc) Launch",
-            "type": "cppvsdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/debug/main.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": true,
-        },
         // {
-        //     "name": "(lldb) Launch",
-        //     "type": "cppdbg",
+        //     "name": "(msvc) Launch",
+        //     "type": "cppvsdbg",
         //     "request": "launch",
-        //     "program": "${workspaceFolder}/main.out",
+        //     "program": "${workspaceFolder}/debug/main.exe",
         //     "args": [],
         //     "stopAtEntry": false,
-        //     // "preLaunchTask": "Build Debug",
         //     "cwd": "${workspaceFolder}",
         //     "environment": [],
         //     "externalConsole": true,
-        //     "MIMode": "lldb"
         // },
+        {
+            "name": "(lldb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/debug/main.out",
+            "args": [],
+            "stopAtEntry": false,
+            // "preLaunchTask": "Build Debug",
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb"
+        },
     ]
 }
