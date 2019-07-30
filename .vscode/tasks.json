@@ -41,20 +41,11 @@
                     "${file}"
                 ],
             },
-            "dependsOn": ["Debug Dir"],
+            // "dependsOn": ["Clean"],
             "group": {                     
                 "kind": "build",
                 "isDefault": true
             }
-        },
-        {
-            "label": "Debug Dir",
-            "type": "shell",
-            "command": "mkdir",
-            "args": [
-                "${workspaceFolder}/debug"
-            ],
-            "dependsOn": ["Clean"]
         },
         {
             "label": "Clean",
@@ -63,21 +54,27 @@
                 "command": "rm",
                 "args": [
                     "-rf",
-                    "${workspaceFolder}/debug"
+                    "${workspaceFolder}/debug/*",
+                    "-v",
+                    ".gitkeep"
                 ]
             },
             "linux": {
                 "command": "rm",
                 "args": [
                     "-rf",
-                    "${workspaceFolder}/debug"
+                    "${workspaceFolder}/debug/*",
+                    "-v",
+                    ".gitkeep"
                 ]
             },
             "windows": {
                 "command": "Remove-Item",
                 "args": [
                     "-Recurse",
-                    "'${workspaceFolder}\\debug'"
+                    "'${workspaceFolder}\\debug'",
+                    "-Exclude",
+                    ".gitkeep"
                 ],
             },
             "problemMatcher": []

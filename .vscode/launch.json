@@ -5,18 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "CPP Launch",
+            "name": "CPP Launch OSX",
             "type": "cppdbg",
             "request": "launch",
-            "windows": {
-                "program": "${workspaceFolder}/debug/main.exe",
-                "args": [],
-                "stopAtEntry": false,
-                "cwd": "${workspaceFolder}",
-                "environment": [],
-                "externalConsole": true,
-            },
-            "osx": {
+            // "osx": {
                 "program": "${workspaceFolder}/debug/main.out",
                 "args": [],
                 "stopAtEntry": false,
@@ -26,7 +18,20 @@
                 // "console": "none",
                 // "console": "internalConsole",
                 "MIMode": "lldb"
-            }
+            // }
+        },
+        {
+            "name": "CPP Launch Win",
+            "type": "cppvsdbg",
+            "request": "launch",
+            // "windows": {
+                "program": "${workspaceFolder}/debug/main.exe",
+                "args": [],
+                "stopAtEntry": false,
+                "cwd": "${workspaceFolder}",
+                "environment": [],
+                "externalConsole": true,
+            // },
         },
     ]
 }
