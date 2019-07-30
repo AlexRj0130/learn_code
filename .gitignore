@@ -1,4 +1,9 @@
 *.pyc
+*.obj
+*.exe
+*.ilk
+*.pdb
+
 learn_elasticsearch/conf.py
 learn_elasticsearch/.vscode/launch.json
 learn_python/py2_venv
