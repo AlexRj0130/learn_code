@@ -28,19 +28,29 @@
                 ],
             },
             "windows": {
-                "command": "cl.exe",
+                "command": "g++",
                 "args": [
-                    "/EHsc",
-                    "/Zi",
-                    "/Fd:",
-                    "${workspaceFolder}/debug/",
-                    "/Fo:",
-                    "${workspaceFolder}/debug/",
-                    "/Fe:",
+                    "-g",
+                    "-std=c++11",
+                    "${file}",
+                    "-o",
                     "${workspaceFolder}/debug/main.exe",
-                    "${file}"
                 ],
             },
+            // "windows": {
+            //     "command": "cl.exe",
+            //     "args": [
+            //         "/EHsc",
+            //         "/Zi",
+            //         "/Fd:",
+            //         "${workspaceFolder}/debug/",
+            //         "/Fo:",
+            //         "${workspaceFolder}/debug/",
+            //         "/Fe:",
+            //         "${workspaceFolder}/debug/main.exe",
+            //         "${file}"
+            //     ],
+            // },
             // "dependsOn": ["Clean"],
             "group": {                     
                 "kind": "build",

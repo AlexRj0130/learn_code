@@ -64,11 +64,11 @@ private:
 
 int main()
 {
-    TreeNode * root = &TreeNode(10,
-                        &TreeNode(5,
-                            &TreeNode(7, NULL, NULL),
+    TreeNode * root = new TreeNode(10,
+                        new TreeNode(5,
+                            new TreeNode(7, NULL, NULL),
                             NULL),
-                        &TreeNode(12, NULL, NULL));
+                        new TreeNode(12, NULL, NULL));
 
     Solution solution;
     solution.FindPath(root, 22);
