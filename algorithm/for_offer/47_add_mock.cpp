@@ -18,14 +18,9 @@ using namespace std;
 
 class Solution {
 public:
-    int LastRemaining_Solution(int n, int m)
+    int Add(int num1, int num2)
     {
-        if(n==0)
-            return -1;
-        if(n==1)
-            return 0;
-        else
-            return (LastRemaining_Solution(n - 1, m) + m % n) % n;
+        return num2 ? Add(num1 ^ num2, (num1 & num2) << 1) : num1;
     }
 };
 
