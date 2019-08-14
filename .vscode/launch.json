@@ -4,22 +4,22 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
-            "name": "CPP Launch OSX",
-            "type": "cppdbg",
-            "request": "launch",
-            // "osx": {
-                "program": "${workspaceFolder}/debug/main.out",
-                "args": [],
-                "stopAtEntry": false,
-                "cwd": "${workspaceFolder}",
-                "environment": [],
-                "externalConsole": true,
-                // "console": "none",
-                // "console": "internalConsole",
-                "MIMode": "lldb"
-            // }
-        },
+        // {
+        //     "name": "CPP Launch OSX",
+        //     "type": "cppdbg",
+        //     "request": "launch",
+        //     // "osx": {
+        //         "program": "${workspaceFolder}/debug/main.out",
+        //         "args": [],
+        //         "stopAtEntry": false,
+        //         "cwd": "${workspaceFolder}",
+        //         "environment": [],
+        //         "externalConsole": true,
+        //         // "console": "internalConsole",
+        //         // "console": "internalConsole",
+        //         "MIMode": "lldb"
+        //     // }
+        // },
         // {
         //     "name": "CPP Launch Win",
         //     "type": "cppvsdbg",
