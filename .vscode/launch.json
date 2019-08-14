@@ -15,7 +15,7 @@
         //         "cwd": "${workspaceFolder}",
         //         "environment": [],
         //         "externalConsole": true,
-        //         // "console": "none",
+        //         // "console": "internalConsole",
         //         // "console": "internalConsole",
         //         "MIMode": "lldb"
         //     // }
