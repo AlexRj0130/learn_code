@@ -33,25 +33,25 @@
         //         "externalConsole": true,
         //     // },
         // },
-        // {
-        //     "name": "CPP Launch Win G++",
-        //     "type": "cppdbg",
-        //     "request": "launch",
-        //     "program": "${workspaceFolder}/debug/main.exe",
-        //     "args": [],
-        //     "stopAtEntry": true,
-        //     "cwd": "${workspaceFolder}",
-        //     "environment": [],
-        //     "externalConsole": true,
-        //     "MIMode": "gdb",
-        //     "miDebuggerPath": "D:\\run_win\\mingw\\mingw64\\bin\\gdb.exe",
-        //     "setupCommands": [
-        //         {
-        //             "description": "Enable pretty-printing for gdb",
-        //             "text": "-enable-pretty-printing",
-        //             "ignoreFailures": true
-        //         }
-        //     ]
-        // },
+        {
+            "name": "CPP Launch Win G++",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/debug/main.exe",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:\\run_win\\mingw\\mingw64\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
     ]
 }

@@ -7,5 +7,7 @@
 learn_elasticsearch/conf.py
 learn_elasticsearch/.vscode/launch.json
 learn_python/py2_venv
+learn_csharp/bin
+learn_csharp/obj
 main.out*
 .DS_Store
