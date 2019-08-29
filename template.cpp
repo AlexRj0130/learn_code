@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <stdlib.h>
 #include <sstream>
 
@@ -16,7 +17,22 @@
 
 using namespace std;
 
+class Solution
+{
+public:
+
+};
+
 int main()
 {
+    string path = "D:\\users\\Documents\\code\\learn_code\\debug\\"; // windows format
+    ifstream cin;
+    cin.open(path + "data.dat");
+    if (!cin.is_open())
+    {
+        cout << "open failed..." << endl;
+        return 0;
+    }
+
     return 0;
 }
