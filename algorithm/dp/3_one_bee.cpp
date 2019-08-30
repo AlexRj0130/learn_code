@@ -20,7 +20,22 @@ using namespace std;
 class Solution
 {
 public:
-
+    long long CountPath(int a, int b)
+    {
+        if (a == b)
+            return 1;
+        vector<long long> array(102, 0);
+        for (int i = a; i <= b; i++)
+        {
+            if (i == a)
+            {
+                array[i] = 1;
+                continue;
+            }
+            array[i] = array[i - 1] + array[i - 2];
+        }
+        return array[b];
+    }
 };
 
 int main()
@@ -35,6 +50,13 @@ int main()
     // }
 
     Solution solution;
-
+    int n;
+    cin >> n;
+    while(n--)
+    {
+        int a, b;
+        cin >> a >> b;
+        cout << solution.CountPath(a, b) << endl;
+    }
     return 0;
 }

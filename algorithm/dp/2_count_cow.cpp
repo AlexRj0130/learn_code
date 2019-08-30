@@ -20,7 +20,18 @@ using namespace std;
 class Solution
 {
 public:
-
+    int CountCow(int n)
+    {
+        int y1 = 1, y2 = 0, y3 = 0, y4 = 0;
+        while (--n)
+        {
+            y1 += y2;
+            y2 = y3;
+            y3 = y4;
+            y4 = y1;
+        }
+        return y1 + y2 + y3 + y4;
+    }
 };
 
 int main()
@@ -35,6 +46,12 @@ int main()
     // }
 
     Solution solution;
-
+    int n;
+    cin >> n;
+    while (n)
+    {
+        cout << solution.CountCow(n) << endl;
+        cin >> n;
+    }
     return 0;
 }
