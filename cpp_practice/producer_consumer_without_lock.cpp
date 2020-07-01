@@ -29,10 +29,11 @@ public:
 
     bool setTask(int task)
     {
-        if (m_queueHead == (m_queueRear + 1) % 16)
+        int nextRear = (m_queueRear + 1) & (16 - 1);
+        if (m_queueHead == nextRear)
             return false;
-        m_taskQueue[m_queueRear++] = task;
-        m_queueRear %= 16;
+        m_taskQueue[m_queueRear] = task;
+        m_queueRear = nextRear;
         return true;
     }
 
@@ -41,7 +42,7 @@ public:
         if (m_queueHead == m_queueRear)
             return false;
         task = m_taskQueue[m_queueHead++];
-        m_queueHead %= 16;
+        m_queueHead &= (16 - 1);
         return true;
     }
     
@@ -67,6 +68,7 @@ public:
                 continue;
             std::cout << "worker: " << m_index << ", task: " << job << std::endl;
         }
+        std::cout << "worker: " << m_index << " stop!!!" << std::endl;
     }
 
     void setIndex(unsigned int index)
@@ -90,13 +92,12 @@ public:
     }
     ~ Master()
     {
+        for (auto & task: m_tasks)
+            task.m_stopFlag = true;
         for (std::thread & t: m_threads)
-        {
             t.join();
-        }
     }
 public:
-
     void Start()
     {
         int num;
@@ -104,9 +105,8 @@ public:
         while(cin >> num)
         {
             m_tasks[(i++) % 3].setTask(num);   
-        } 
+        }
     }
-
 private:
     Task m_tasks[3];
     Worker m_workers[3];
